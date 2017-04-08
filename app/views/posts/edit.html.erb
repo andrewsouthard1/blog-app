@@ -1,0 +1,11 @@
+
+<h1>Edit Post</h1>
+<%= form_tag "/posts/#{@post.id}", method: :put do %>
+  <p>Text<textarea class="input" rows="4" cols="10" name="text"><%= @post.text %></textarea></p>
+  <input type="submit" value="Submit Post">
+<% end %>
+
+<%= form_tag "/posts/#{@post.id}", method: :delete do %>
+  <input type="submit" value="DELETE">
+<% end %>
+
